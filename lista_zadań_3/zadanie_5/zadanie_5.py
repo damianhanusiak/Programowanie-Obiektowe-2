@@ -1,0 +1,19 @@
+import math
+
+
+def primeNumbersGenerator(n):
+    arr = [True for i in range(n)]
+    for i in range(2, int(math.sqrt(n))+1):
+        if arr[i]:
+            j = 2
+            while i*j < n:
+                arr[i*j] = False
+                j += 1
+
+    for i in range(2, len(arr)):
+        if arr[i]:
+            yield i
+
+
+for n in primeNumbersGenerator(100):
+    print(n)
