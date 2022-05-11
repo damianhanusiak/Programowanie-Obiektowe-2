@@ -33,7 +33,6 @@ class Pupil:
             self.__dict__["surname"] = "NoSurname"
 
     # def complete_marks(self, subject, rating):
-
     def print_marks(self):
         for i in self.marks:
             print(f"{i}: {self.marks[i]}")
